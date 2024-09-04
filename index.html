@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Created by TheFeerid">
+    <title>Voice to text</title>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/duotone.css" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/brands.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div class="test-borders1">
+        <div class="test-borders2">
+            <div class="test-borders3">
+                <div class="test-borders4">
+                    <div class="test-borders5">
+                        <button aria-label="record-toggle" type="button" class="test" id="record-toggle"><i
+                                class="fa-solid fa-microphone"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div id="controls">
+            <header>
+                <div class="select-box">
+                    <label id="lang-label" for="language-select">Select language</label>
+                    <select id="language-select" name="language-select">
+                        <option value="en-US">En</option>
+                        <option value="tr-TR">Tr</option>
+                        <option value="az-AZ">Az</option>
+                        <option value="es-ES">Es</option>
+                        <option value="es-ES">Es</option>
+                    </select>
+                </div>
+                <button id="view-notes">View Saved Notes</button>
+            </header>
+            <div class="textarea-box">
+                <textarea id="transcript" placeholder="Notes will appear here..."></textarea>
+                <button type="button" id="copy-text" aria-label="copy"><i class="fa-regular fa-copy"></i></button>
+            </div>
+        </div>
+    </div>
+    <canvas id="visualizer"></canvas>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>

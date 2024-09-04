@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Teko:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ffffff20;
+    border-radius: 99px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.note-box {
+    padding: 10px 10px 0 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.note-box-header {
+    display: flex;
+    width: 100%;
+}
+
+.note-h-1 {
+    width: 100%;
+}
+
+.del-btn {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 4px;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    border: 2px solid #fff;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+}
+
+.note-b-main {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.sav-n {
+    padding: 10px;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+}
+
+.sav-n-h {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.sav-n-h button {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+    color: #fff;
+}

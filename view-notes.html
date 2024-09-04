@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/duotone.css" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/brands.css" />
+    <link rel="stylesheet" href="style-saved.css">
+    <title>Saved Voice Notes</title>
+</head>
+
+<body>
+    <div class="sav-n">
+        <div class="sav-n-h">
+            <button onclick="window.location.href='index.html'"><i class="fa-solid fa-left"></i></button>
+            <h1>Saved Voice Notes</h1>
+        </div>
+
+        <div id="notes-container"></div>
+    </div>
+
+    <script>
+        const notesContainer = document.getElementById('notes-container');
+
+        function displayNotes() {
+            const notes = JSON.parse(localStorage.getItem('voiceNotes')) || [];
+            notesContainer.innerHTML = '';
+            notes.forEach((note, index) => {
+                const noteElement = document.createElement('div');
+                noteElement.innerHTML = `
+                <div class="note-box">
+                    <div class="note-b-main">
+                        <div class="note-box-header">
+                            <div class="note-h-1">
+                                <p class=""><strong>Note ${index + 1}:</strong> ${note.text}</p>
+                                <p><em>Date: ${note.date}</em></p>
+                            </div>
+                        </div>    
+                        <button class="del-btn" onclick="deleteNote(${index})"><i class="fa-solid fa-trash"></i> </button>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                `;
+                notesContainer.appendChild(noteElement);
+            });
+        }
+
+        function deleteNote(index) {
+            let notes = JSON.parse(localStorage.getItem('voiceNotes')) || [];
+            notes.splice(index, 1);
+            localStorage.setItem('voiceNotes', JSON.stringify(notes));
+            displayNotes();
+        }
+
+        window.onload = displayNotes;
+    </script>
+</body>
+
+</html>
